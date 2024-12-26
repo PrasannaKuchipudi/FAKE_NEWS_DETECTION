@@ -4,7 +4,6 @@ from sklearn.linear_model import PassiveAggressiveClassifier
 import pickle
 import pandas as pd
 from sklearn.model_selection import train_test_split
-
 app = Flask(__name__)
 tfvect = TfidfVectorizer(stop_words='english', max_df=0.7)
 loaded_model = pickle.load(open('model.pkl', 'rb'))
@@ -37,3 +36,6 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+    
